@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Train a Unified Multimodal Data Quality Classifier with Synthetic Data.">
+  <meta name="keywords" content="Unified Multimodal Data Quality Classifier; Synthetic Data">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Train a Unified Multimodal Data Quality Classifier with Synthetic Data.</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/954/954591.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Train a Unified Multimodal Data Quality Classifier with Synthetic Data</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block"><b>ICML 2024</b></span><br> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://victorwz.github.io/">Weizhi Wang</a><sup>1,2</sup>,&nbsp;&nbsp;
+            </span> 
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=DxPjkDoAAAAJ&hl=en">Rongmei Lin</a><sup>2</sup>,&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/linjieyang89/">Shiyang Li</a><sup>2</sup>,&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://www.colinlockard.com/">Colin Lockard</a><sup>2</sup>, &nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=6FE__csAAAAJ&hl=en">Ritesh Sarkhel</a><sup>2</sup>,&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=BIVZIAQAAAAJ&hl=en">Sanket Lokegaonkar</a><sup>2</sup>,&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://shangjingbo1226.github.io/">Jingbo Shang</a><sup>2,3</sup>,&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://sites.cs.ucsb.edu/~xyan/index.htm">Xifeng Yan</a><sup>1</sup>,&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=OtoYlNoAAAAJ&hl=en">Nasser Zalmout</a><sup>2</sup>,&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=6-Xx0IoAAAAJ&hl=en">Xian Li</a><sup>2</sup>,&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC Santa Barbara&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>2</sup>Amazon Stores Foundational AI&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>3</sup>UC San Diego</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2510.15162"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/2510.15162"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/weizhiwang/unifilter_train_data"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/weizhiwang/OBELICS_HQ_5M_UniFilter"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>OBELICS-HQ</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/weizhiwang/UniFilter-Qwen2.5-1.5B"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Model</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Victorwz/UniFilter"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The Multimodal Large Language Models (MLLMs) are continually pre-trained on a mixture of image-text caption data and interleaved document data, while the high-quality data filtering towards image-text interleaved document data is under-explored. 
+            We propose to train an efficient MLLM as a Unified Mulitmodal Data Quality Classifier to Filter both high-quality image-text caption and interleaved data (UniFilter).To address the challenge of collecting diverse labeled multimodal data, we introduce a semi-synthetic approach that leverages readily available raw images and generates corresponding text across four quality levels. This method enables efficient creation of sample-score pairs for both caption and interleaved document data to train UniFilter.We apply UniFilter to curate high-quality caption data from DataComp caption dataset and interleaved data from the OBELICS image-text interleaved dataset. MLLMs pre-trained on the filtered data demonstrate significantly enhanced capabilities compared to those trained on baseline-filtered data, achieving stronger zero-shot reasoning and in-context learning capabilities. After visual supervised fine-tuning, these UniFilter-induced MLLMs achieve stronger performance on various benchmarks, highlighting the downstream benefits of high-quality multimodal pre-training. We release the synthetic training data used for training UniFilter, the UniFilter model checkpoints, and the high-quality interleaved document subset OBELICS-HQ, curated by UniFilter, to the community for reproduction and further development.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <!-- Paper video. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Synthetic Data Generation for Training UniFilter</h2>
+        <!-- Interpolating. -->
+        <img src="./static/images/synthetic_data_generation.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <img src="./static/images/data_prompt.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p>
+          <br />
+          We adopt a semi-synthetic approach to generate synthetic data for training UniFilter. For each image-text caotion or interleaved document, we select the original images only and generate the text paragraphs or captions following the designated quality levels across 0, 1, 2, 3. Then, we can construct (data_sample, score) pairs for training UniFilter.
+        </p>
+      <!--/ Interpolating. -->
+      </div>
+    </div>
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">UniFilter Architecture and Classification Performance</h2>
+
+        <!-- Interpolating. -->
+        <img src="./static/images/model.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <img src="./static/images/classification_acc.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p>
+          <br>
+          We regard the quality score generation task as a standard clasification task. We replace the LM Head of an MLLM with a classification head with one floating number logit output. Then a MSE loss is applied on minizing the difference between the predicted quality score and the ground truth quality score.
+          <br>
+          The UniFilter with Qwen2.5-1.5B-Instruct LLM Backbone, SigLIP-SO400M-384px, and AvgPooling projection layer achieves best trade-off between classification accuracy and model size. We also train a stronger UniFilter after the paper acceptance with Qwen3-0.6B, SigLIP-2-SO400M, and AvgPooling projection layer, released in [UniFilter-Qwen3-0.6B](https://huggingface.co/weizhiwang/UniFilter-Qwen3-0.6B).
+        </p>
+      <!--/ Interpolating. -->
+      </div>
+    </div>
+
+    <!--/ Method. -->
+    <br />
+    <!-- Results -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <h3 class="title is-4">1. UniFilter's Superiority on Curating Image-Text Caption Data</h3>
+        <img src="./static/images/caption_performance.png" class="interpolation-image" alt="Empty"/>
+        <br>
+        <h3 class="title is-4">2. UniFilter's Superiority on Curating Image-Text Interleaved Document Data</h3>
+        <img width="1000px" src="./static/images/interleaved_performance.png" class="interpolation-image" alt="Empty"/>
+        <br>
+        <h3 class="title is-4">3. SFT-ed MLLMs benefit from the high-quality pre-training data curated by MLLM</h3>
+        <img width="1000px" src="./static/images/scaling_sft.png" class="interpolation-image" alt="Empty"/>
+        <br>
+        <!-- <p>
+          <br />
+          Visualization of Zero-Shot 2D Animation Generation. MagicPose can provide a precise generation with identity information from cartoon-style images even without any further fine-tuning after being trained on real-human dance videos.  
+        </p> -->
+      </div>
+    </div>
+
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{UniFilter,
+    title={Train a Unified Multimodal Data Quality Classifier with Synthetic Data},
+    author={Wang, Weizhi and Lin, Rongmei and Li, Shiyang and Lockard, Colin and Sarkhel, Ritesh and Lokegaonkar, Sanket and Shang, Jingbo and Yan, Xifeng and Zalmout, Nasser and Li, Xian},
+    journal={arXiv preprint arXiv:2510.15162},
+    year={2025}
+  }</code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="Acknowledgement">
+  <!-- <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      We would like to thank for Facebook (now Meta) for donating the 8xA100-40G GPUs for conducting the experiments. We appreciate the codebase of <a href="https://github.com/TRI-ML/prismatic-vlms/tree/main">prismatic-vlms</a> and <a href="https://github.com/TRI-ML/vlm-evaluation">vlm-evaluation</a>, on which we build our codebase.
+    </p>
+  </div> -->
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website adapted from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
